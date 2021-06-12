@@ -295,7 +295,12 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Order Ass");
+        jLabel11.setText("Manage Accessories");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -446,6 +451,12 @@ public class MainForm extends javax.swing.JFrame {
         this.dispose();
         new OrdersList().setVisible(true);
     }//GEN-LAST:event_reportClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // TODO add your handling code here:
+          this.dispose();
+        new AccessoryForm().setVisible(true);
+    }//GEN-LAST:event_jLabel11MouseClicked
 
     /**
      * @param args the command line arguments
