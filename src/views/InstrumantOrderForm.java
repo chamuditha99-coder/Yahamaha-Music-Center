@@ -5,7 +5,7 @@
  */
 package views;
 
-import com.sun.tools.javac.Main;
+//import com.sun.tools.javac.Main;
 import controller.CustomerController;
 import controller.OrderItemController;
 import java.sql.SQLException;
@@ -46,6 +46,7 @@ public class InstrumantOrderForm extends javax.swing.JFrame {
         txtCID = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        txtbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,6 +104,13 @@ public class InstrumantOrderForm extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Qty :");
 
+        txtbtn.setText("Home");
+        txtbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtbtnMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,7 +123,9 @@ public class InstrumantOrderForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(216, 216, 216)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addGap(75, 75, 75)
+                        .addComponent(txtbtn))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(168, 168, 168)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,15 +142,20 @@ public class InstrumantOrderForm extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(317, 317, 317)
                         .addComponent(btnSave)))
-                .addContainerGap(236, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnClose))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnClose)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(txtbtn)))
                 .addGap(93, 93, 93)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -207,6 +222,13 @@ public class InstrumantOrderForm extends javax.swing.JFrame {
         new MainForm().setVisible(true);
     }//GEN-LAST:event_formMouseClicked
 
+    private void txtbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtbtnMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        new MainForm().setVisible(true);
+        
+    }//GEN-LAST:event_txtbtnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -255,5 +277,6 @@ public class InstrumantOrderForm extends javax.swing.JFrame {
     private javax.swing.JTextField txtCID;
     private javax.swing.JTextField txtInsID;
     private javax.swing.JTextField txtQty;
+    private javax.swing.JButton txtbtn;
     // End of variables declaration//GEN-END:variables
 }

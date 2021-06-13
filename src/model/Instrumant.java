@@ -11,15 +11,42 @@ package model;
  */
 public class Instrumant {    
  
-    
+    private int ID; 
     private String instrumantCode;
     private String description;
     private int qty;
     private double unitPrice;
+    private int SupID;
 
-    public Instrumant() {
+    public int getID() {
+        return ID;
     }
 
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public int getSupID() {
+        return SupID;
+    }
+
+    public void setSupID(int SupID) {
+        this.SupID = SupID;
+    }
+
+    public Instrumant() {
+        }
+    
+    public Instrumant(int ID,String insName, int qty,int unitPrice,int SupID){
+        this.ID=ID;
+        this.description= insName;
+        this.qty=qty;
+        this.unitPrice=unitPrice;
+        this.SupID=SupID;
+        
+    }
+    
+    
     public Instrumant(String instrumantCode, String description, int qty, double unitPrice) {
         this.instrumantCode = instrumantCode;
         this.description = description;

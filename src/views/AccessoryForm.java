@@ -59,6 +59,11 @@ public class AccessoryForm extends javax.swing.JFrame {
                 btnsaveMouseClicked(evt);
             }
         });
+        btnsave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsaveActionPerformed(evt);
+            }
+        });
 
         btnhome.setText("Home");
         btnhome.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,6 +158,10 @@ public class AccessoryForm extends javax.swing.JFrame {
         this.dispose();
         new MainForm().setVisible(true);
     }//GEN-LAST:event_btnhomeMouseClicked
+
+    private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsaveActionPerformed
 
     /**
      * @param args the command line arguments

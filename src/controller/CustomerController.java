@@ -33,6 +33,7 @@ public class CustomerController extends JOptionPane{
           stm.setObject(3, customer.getAdress());
            stm.setObject(4, customer.getTelNo());
         int res = stm.executeUpdate();
+        conn.close();
         if (res>0) {
            
            return true;
